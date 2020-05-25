@@ -1,11 +1,32 @@
-import React from 'react'
+import React from 'react';
 
-export default class App extends React.Component {
-  render(){
-    return(
-      <div>
-        <h1>My React App</h1>
-      </div>
-    )
-  }
+import UserList from './UserList';
+import CreateUser from './CreateUser';
+
+function App() {
+  const users = [
+    {
+      id: 1,
+      username: 'velopert',
+      email: 'public.velopert@gmail.com'
+    },
+    {
+      id: 2,
+      username: 'tester',
+      email: 'tester@example.com'
+    },
+    {
+      id: 3,
+      username: 'liz',
+      email: 'liz@example.com'
+    }
+  ];
+  return (
+    <>
+      <CreateUser />
+      <UserList user={user} />
+    </>
+  )
 }
+
+export default App;
